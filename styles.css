@@ -1,0 +1,35 @@
+html, body {
+    height: 100%
+}
+.pageHeader {
+  background-color: green;
+  height: 100px;
+}
+
+.subHeader {
+    background-color: greenyellow;
+    height: 50px;
+}
+
+.carousel {
+    background-color: yellow;
+    height: 300px;
+}
+
+.navBar {
+    background-color: tomato;
+    height: 100px;
+}
+
+.gridSystem {
+    background-color: thistle;
+    min-height: 100%;
+    overflow: auto;
+}
+
+.card {
+    background-color: white;
+    height: 100px;
+    width: 50px;
+    margin: 10px;
+}
