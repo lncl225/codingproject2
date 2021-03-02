@@ -2,34 +2,94 @@ html, body {
     height: 100%
 }
 .pageHeader {
-  background-color: green;
-  height: 100px;
+  background-color: wheat;
+  height: 300px;
 }
 
 .subHeader {
-    background-color: greenyellow;
-    height: 50px;
+    background-color: whitesmoke;
+    height: 150px;
 }
 
 .carousel {
-    background-color: yellow;
-    height: 300px;
+    background-color:paleturquoise;
+    height: 500px;
 }
 
 .navBar {
-    background-color: tomato;
+    background-color:coral;
     height: 100px;
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap:wrap; 
+    display: flex;
+    flex-direction: row;
+    
 }
 
+.circleScaleBtn {
+    padding: 40px 70px;
+    margin-top: 10px;
+    background-color: hsl(222, 100%, 95%);
+    color: hsl(165, 69%, 49%);
+    position: relative;
+    border-radius: 95px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circleScaleBtn span {
+    z-index: 1;
+    position: relative;
+}
+
+.circleScaleBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 90%;
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
+    background-color: hsl(194, 62%, 81%);
+    opacity: 0;
+}
+
+.circleScaleBtn:hover span {
+    color: hsl(222, 100%, 95%);
+}
+
+.circleScaleBtn:hover::before {
+    opacity: 1;
+    transition-duration: .85s;
+    transform: translate3d(-50%,-50%,0) scale3d(1,1,1)
+}
+
+.button {
+    background-color: whitesmoke;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+        }
+
 .gridSystem {
-    background-color: thistle;
+    background-color: rgb(206, 182, 218);
     min-height: 100%;
     overflow: auto;
-}
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 250px;
+    justify-content: space-around;
+    }
 
 .card {
     background-color: white;
-    height: 100px;
-    width: 50px;
-    margin: 10px;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
 }
+
