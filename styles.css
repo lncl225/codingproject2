@@ -1,24 +1,56 @@
+/***@font-face 
+    font-family: 'Bellota', cursive;
+    font-style: normal;
+    font-weight: normal;
+    src:local('Bellota'), url(https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"rel="stylesheet);
+}**/
+
+
 html, body {
     height: 100%
 }
+
 .pageHeader {
   background-color: wheat;
   height: 300px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Bellota'; 
+  position: static;
+  font-size: 7vw;
+  padding-top: 55px;
 }
 
 .subHeader {
-    background-color: whitesmoke;
-    height: 150px;
-}
+    background-color: whitesmoke (185, 73, 73);
+    height: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'bellota', cursive;
+    font-weight: 700;
+    padding: 22px;
+    }
 
 .carousel {
     background-color:paleturquoise;
     height: 500px;
 }
 
+.alphabet_chunk {
+    background-color:hsl(165, 69%, 49%);
+    height: 25px;
+    padding: 15px;
+    font-size: 19px;
+    text-align: center;
+    font-family: 'bellota', 'cursive';
+    font-style: normal;
+    font-weight: 900;
+    
+}
+
 .navBar {
     background-color:coral;
-    height: 100px;
+    height: 130px;
     overflow: auto;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -29,14 +61,18 @@ html, body {
 }
 
 .circleScaleBtn {
-    padding: 40px 70px;
-    margin-top: 10px;
+    padding: 40px 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: hsl(222, 100%, 95%);
-    color: hsl(165, 69%, 49%);
+    color: hsl(249, 83%, 26%);
     position: relative;
-    border-radius: 95px;
+    border-radius: 50px;
     overflow: hidden;
     z-index: 1;
+    font-family: 'bellota', 'cursive';
+    font-style: normal;
+    font-weight: 900;
 }
 
 .circleScaleBtn span {
@@ -64,7 +100,7 @@ html, body {
 
 .circleScaleBtn:hover::before {
     opacity: 1;
-    transition-duration: .85s;
+    transition-duration: .99s;
     transform: translate3d(-50%,-50%,0) scale3d(1,1,1)
 }
 
@@ -82,14 +118,24 @@ html, body {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: 250px;
+    height: 1000px;
     justify-content: space-around;
     }
 
 .card {
     background-color: white;
     height: 400px;
-    width: 300px;
+    width: 350px;
     margin: 20px;
+    font-family: 'bellota', 'cursive';
+    font-size: 150px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 180px;
+    border-color: rgb(91, 155, 155) ;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 10px;
+
 }
 
