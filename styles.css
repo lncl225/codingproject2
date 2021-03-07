@@ -204,11 +204,9 @@ body {
 .gridSystem {
     background-color: rgb(218, 199, 230);
     min-height: 100%;
-    overflow: auto;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: 1000px;
     justify-content: space-around;
     }
 
