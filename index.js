@@ -18,13 +18,31 @@
             let newPrev = slide - 1;
             let newNext = slide + 1;
             let oldPrev = slide - 2;
-            let newPrev = slide + 2;
+            let oldNext = slide + 2;
 
             if ((totalItems - 1) > 3) {
                 if (newPrev <= 0) {
                     oldPrev = (totalItems - 1);
+                } else if (newNext >= (totalItems - 1)) {
+                    oldNext = 0;
                 }
             }
+
+            if (slide === 0) {
+                newPrev = (totalItems - 1);
+                oldPrev = (totalItems - 2);
+                oldNext = (slide + 1);
+            } else if (slide === (totalItems - 1)) {
+                newPrev = (slide - 1);
+                newNext = 0;
+                oldNext = 1;
+            }
+            
+            items[oldPrev].className = itemClassName;
+            items[oldNext].className = itemClassName;
+            items[newPrev].className = itemClassName + " prev";
+            items[slide].className = itemClassName + " active";
+            items[newNext].className = itemClassName + " next";
         }
     };
 
@@ -63,6 +81,13 @@
         const prev = d.getElementsByClassName('carousel__button--prev')[0];
 
         next.addEventListener('click', moveNext);
-        next.addEventListener('click', movePrev);
+        prev.addEventListener('click', movePrev);
     };
+
+    const initCarousel = () => {
+        setInitialClasses();
+        setEventListeners();
+        moving = false;
+    };
+    initCarousel();
 }(document));

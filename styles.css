@@ -56,11 +56,10 @@ body {
 }
 
 .carousel__container {
-    background-color: yellow;
-    height: 300px;
     overflow: hidden;
     width: 90%;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .carousel {
@@ -73,8 +72,8 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
+    padding: 1rem 0;
     margin: auto;
-    padding: 1rem 4rem;
     z-index: 100;
     transition: transform .5s, opacity .5s, z-index .5s;
 }
@@ -114,11 +113,11 @@ body {
 }
 
 .carousel__button--prev {
-    left: 0;
+    left: 12px;
 }
 
 .carousel__button--next {
-    right: 0;
+    right: 12px;
 }
 
 .carousel__button--prev::after,
