@@ -5,12 +5,9 @@
     src:local('Bellota'), url(https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"rel="stylesheet);
 }**/
 
-
-
 html, body {
     height: 100%
 }
-
 
 body {
     background-color: cornsilk;
@@ -44,11 +41,6 @@ body {
     font-family: 'bellota', cursive;
     font-weight: 700;
     padding: 22px;
-    }
-
-.carousel {
-    background-color:rgb(175, 213, 248);
-    height: 500px;
 }
 
 .alphabet_chunk {
@@ -61,6 +53,89 @@ body {
     font-family: 'bellota', 'cursive';
     font-style: normal;
     font-weight: 900;
+}
+
+.carousel__container {
+    overflow: hidden;
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.carousel {
+    transform-style: preserve-3d;
+    background-color:rgb(175, 213, 248)
+}
+
+.carousel__photo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    margin: auto;
+    z-index: 100;
+    transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carousel__poto.initial,
+.carousel__photo.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+.carousel__photo.prev,
+.carousel__photo.next {
+    z-index: 800;
+}
+
+.carousel__photo.prev {
+    transform: translate(-100%);
+}
+
+.carousel__photo.next {
+    transform: translate(100%);
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #FFF;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid black;
+}
+
+.carousel__button--prev {
+    left: 12px;
+}
+
+.carousel__button--next {
+    right: 12px;
+}
+
+.carousel__button--prev::after,
+.carousel__button--next::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+    left: 47%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .navBar {
@@ -129,11 +204,9 @@ body {
 .gridSystem {
     background-color: rgb(218, 199, 230);
     min-height: 100%;
-    overflow: auto;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: 1000px;
     justify-content: space-around;
     }
 
@@ -153,4 +226,3 @@ body {
     border-radius: 10px;
 
 }
-
