@@ -1,4 +1,42 @@
+const MODAL_CONTENT = {
+    AtoE: {
+        copy: 'A is for ant',
+        image: 'https://place-puppy.com/1920x1024'
+    },
+    FtoK: {
+        copy: 'F is for ant',
+        image: ''
+    },
+    LtoO: {
+        copy: 'L is for ant',
+        image: ''
+    },
+    PtoU: {
+        copy: 'P is for ant',
+        image: ''
+    },
+    VtoZ: {
+        copy: 'V is for ant',
+        image: ''
+    }
+};
+
+const getContent = letters => {
+    if (['abcde'].includes(letters[1])) {
+        return MODAL_CONTENT.AtoL
+    } else if (['ghijk'].includes(letters[1])) {
+        return MODAL_CONTENT.FtoK
+    } else if (['lmno'].includes(letters[1])) {
+        return MODAL_CONTENT.LtoO
+    } else if (['pqrstu'].includes(letters[1])) {
+        return MODAL_CONTENT.PtoU
+    } else {
+        return MODAL_CONTENT.VtoZ
+    }
+}
+
 !(function(d) {
+    // Image Carousel
     const itemClassName = 'carousel__photo';
     const items = d.getElementsByClassName(itemClassName);
     const totalItems = items.length;
@@ -89,5 +127,49 @@
         setEventListeners();
         moving = false;
     };
+
     initCarousel();
+
+    // Modal
+    const modal = document.querySelector(".modal");
+    const modalContent= document.querySelector(".modal-copy");
+    const modalImage = document.querySelector('.modal-image');
+    const modalOverlay = document.querySelector(".overlay");
+    const closeButton = document.querySelector(".close-button");
+    const cards = document.querySelectorAll(".card");
+
+    closeButton.addEventListener("click", function() {
+        modal.classList.toggle("closed");
+        modalOverlay.classList.toggle("closed");
+    });
+
+    cards.forEach(card => {
+        card.addEventListener("click", function() {
+            const content = getContent(card.innerHTML);
+            modal.classList.toggle("closed");
+            modalOverlay.classList.toggle("closed");
+            modalContent.innerHTML = content.copy;
+            // modalImage.setAttribute('src', content.image);
+            console.log(modalImage)
+        });
+    });
+
+    // Scroll to top Button
+    const scrollButton = document.getElementById("scroll-button");
+    
+    scrollFunction = () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollButton.style.display = "block";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    }
+    document.addEventListener('scroll', scrollFunction);
+
+    topFunction = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    
+    scrollButton.addEventListener('click', topFunction);
 }(document));
