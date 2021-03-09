@@ -15,11 +15,8 @@ body {
     background-repeat: repeat-y;
     background-size: cover;
 
- }
-
- .h1 {
-     margin: 0;
 }
+
 
 .pageContainer {
     max-width: 1200px;
@@ -27,14 +24,18 @@ body {
 }
 
 .pageHeader {
-  background-color: rgb(255, 235, 196);
-  text-align: center;
-  font-weight: 700;
-  font-family: 'Bellota'; 
-  position: static;
-  font-size: 7vw;
-  padding-top: 55px;
-  padding-bottom: 0px;
+    background-color: rgb(255, 235, 196);
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Bellota'; 
+    position: static;
+    font-size: 7vw;
+    padding-top: 55px;
+    padding-bottom: 0px;
+}
+
+.pageHeader h1 {
+    margin: 0;
 }
 
 .subHeader {
