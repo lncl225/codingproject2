@@ -11,11 +11,15 @@ html, body {
 
 body {
     background-color: cornsilk;
-    background-image: image("Texture 8.jpg");
-    background-repeat: repeat;
+    background-image: url("./imgs/71design.png");
+    background-repeat: repeat-y;
     background-size: cover;
 
  }
+
+ .h1 {
+     margin: 0;
+}
 
 .pageContainer {
     max-width: 1200px;
@@ -24,7 +28,6 @@ body {
 
 .pageHeader {
   background-color: rgb(255, 235, 196);
-  height: 300px;
   text-align: center;
   font-weight: 700;
   font-family: 'Bellota'; 
@@ -35,16 +38,15 @@ body {
 
 .subHeader {
     background-color: whitesmoke (185, 73, 73);
-    height: 20px;
+    height: 0px;
     text-align: center;
     font-size: 25px;
     font-family: 'bellota', cursive;
     font-weight: 700;
-    padding: 22px;
+    padding: 10px;
 }
 
 .alphabet_chunk {
-    background-color:hsl(165, 69%, 49%);
     height: 5%;
     padding: 10px;
     margin: 0;
@@ -57,14 +59,14 @@ body {
 
 .carousel__container {
     overflow: hidden;
-    width: 90%;
     box-sizing: border-box;
-    margin: auto;
+    background-color:rgb(241, 225, 129)
 }
 
 .carousel {
+    width: 90%;
+    margin: auto;
     transform-style: preserve-3d;
-    background-color:rgb(175, 213, 248)
 }
 
 .carousel__photo {
@@ -139,7 +141,7 @@ body {
 }
 
 .navBar {
-    background-color:rgb(255, 145, 106);
+    background-color:rgb(238, 119, 8);
     height: 130px;
     overflow: auto;
     align-items: flex-start;
@@ -202,7 +204,7 @@ body {
         }
 
 .gridSystem {
-    background-color: rgb(218, 199, 230);
+    background-color: rgb(243, 195, 63);
     min-height: 100%;
     display: flex;
     align-items: flex-start;
@@ -220,7 +222,7 @@ body {
     font-weight: 700;
     text-align: center;
     padding-top: 180px;
-    border-color: rgb(91, 155, 155) ;
+    border-color: rgb(151, 48, 134) ;
     border-style: solid;
     border-width: 7px;
     border-radius: 10px;
