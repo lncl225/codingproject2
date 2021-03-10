@@ -1,5 +1,7 @@
 const MODAL_CONTENT = {
     AtoE: {
+        header: 'Aa',
+        subheader: 'A is for ANT',
         copy: 'A is for ant',
         image: 'https://place-puppy.com/1920x1024'
     },
@@ -16,7 +18,7 @@ const MODAL_CONTENT = {
         image: ''
     },
     VtoZ: {
-        copy: 'V is for ant',
+        copy: 'This is on line VtoZ in JS',
         image: ''
     }
 };
@@ -148,7 +150,7 @@ const getContent = letters => {
             const content = getContent(card.innerHTML);
             modal.classList.toggle("closed");
             modalOverlay.classList.toggle("closed");
-            modalContent.innerHTML = content.copy;
+            //modalContent.innerHTML = content.copy;
             // modalImage.setAttribute('src', content.image);
             console.log(modalImage)
         });

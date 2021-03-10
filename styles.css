@@ -15,9 +15,8 @@ body {
     background-repeat: repeat-y;
     background-size: cover;
 
+
 }
-
-
 .pageContainer {
     max-width: 1200px;
     margin: auto;
@@ -36,17 +35,52 @@ body {
 
 .pageHeader h1 {
     margin: 0;
+    padding: 0;
+}
+
+
+.pageHeaderevent h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'bellota';
 }
 
 .subHeader {
-    background-color: cornsilk;
     margin: 0px;
-    height: 90px;
+    height: 100px;
     text-align: center;
     font-size: 25px;
     font-family: 'bellota', cursive;
     font-weight: 700;
-    padding: 50px;
+    padding: 0px;
+}
+
+.subHeaderevent {
+        margin-top: 2px;
+        padding: 2px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 10px;
+        background-color: #fff;
+        color: #444;
+}
+
+
+.box {
+        background-color: rgb(109, 199, 132);
+        justify-content: left;
+        flex-direction: row;
+        flex-grow: inherit;
+        height: auto;
+        width: auto;
+        color:rgb(34, 2, 30);
+        border-radius: 5px;
+        margin: 14px;
+        padding: 20px;
+        font-size: 12px;
 }
 
 .alphabet_chunk {
@@ -160,14 +194,14 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: hsl(194, 100%, 97%);
-    color: hsl(249, 83%, 26%);
+    color: hsl(273, 83%, 26%);
     position: relative;
     border-radius: 50px;
     overflow: hidden;
     z-index: 1;
-    font-family: 'bellota', 'cursive';
-    font-style: normal;
-    font-weight: 900;
+    font-family: 'bellota';
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .circleScaleBtn span {
@@ -185,7 +219,7 @@ body {
     border-radius: 90%;
     transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
     transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
-    background-color: hsl(145, 63%, 81%);
+    background-color: hsl(263, 74%, 24%);
     opacity: 0;
 }
 
@@ -217,14 +251,14 @@ body {
 
 .card {
     background-color: rgb(250, 242, 228);
-    height: 400px;
-    width: 350px;
+    height: 340px;
+    width: 300px;
     margin: 20px;
     font-family: 'bellota', 'cursive';
     font-size: 150px;
     font-weight: 700;
     text-align: center;
-    padding-top: 180px;
+    padding-top: 140px;
     border-color: rgb(151, 48, 134);
     border-style: solid;
     border-width: 7px;
@@ -259,14 +293,21 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     /* Size */
-    height: 50%;
-    width: 50%;
-    background-color: white;
-    border-radius: 12px;
+    height: 950px;
+    width: 550px;
+    background-color: rgb(250, 242, 228);
+    border-color: rgb(135, 14, 146);
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 22px;
 }
 
 .modal.closed {
     display: none;
+}
+
+.modal p {
+    padding: 10px 60px;
 }
 
 .modal .close-button {
@@ -278,6 +319,7 @@ body {
     background: none;
     font-weight: 600;
     cursor: pointer;
+    color: darkorange;
 }
 
 .modal-image {
@@ -295,19 +337,21 @@ body {
 #scroll-button {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
+    bottom: 50px; /* Place the button at the bottom of the page */
     right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
+    background-color:hsl(263, 74%, 24%); /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    font-family: 'bellota';
+    font-weight: 700;
+    font-size: 20px; /* Increase font size */
 }
 
 #scroll-button:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: rgb(236, 132, 13); /* Add a dark-grey background on hover */
   }
