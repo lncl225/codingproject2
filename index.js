@@ -1,39 +1,22 @@
-const MODAL_CONTENT = {
-    AtoE: {
-        header: 'Aa',
-        subheader: 'A is for ANT',
-        copy: 'A is for ant',
-        image: 'https://place-puppy.com/1920x1024'
-    },
-    FtoK: {
-        copy: 'F is for ant',
-        image: ''
-    },
-    LtoO: {
-        copy: 'L is for ant',
-        image: ''
-    },
-    PtoU: {
-        copy: 'P is for ant',
-        image: ''
-    },
-    VtoZ: {
-        copy: 'This is on line VtoZ in JS',
-        image: ''
-    }
+const ID = {
+    AtoE: 'a-modal',
+    FtoK: 'f-modal',
+    LtoO: 'l-modal',
+    PtoU: 'p-modal',
+    VtoZ: 'v-modal',
 };
 
-const getContent = letters => {
-    if (['abcde'].includes(letters[1])) {
-        return MODAL_CONTENT.AtoL
-    } else if (['ghijk'].includes(letters[1])) {
-        return MODAL_CONTENT.FtoK
-    } else if (['lmno'].includes(letters[1])) {
-        return MODAL_CONTENT.LtoO
-    } else if (['pqrstu'].includes(letters[1])) {
-        return MODAL_CONTENT.PtoU
+const getModalId = letter => {
+    if ('abcde'.split('').includes(letter)) {
+        return ID.AtoE
+    } else if ('fghijk'.split('').includes(letter)) {
+        return ID.FtoK
+    } else if ('lmno'.split('').includes(letter)) {
+        return ID.LtoO
+    } else if ('pqrstu'.split('').includes(letter)) {
+        return ID.PtoU
     } else {
-        return MODAL_CONTENT.VtoZ
+        return ID.VtoZ
     }
 }
 
@@ -133,26 +116,24 @@ const getContent = letters => {
     initCarousel();
 
     // Modal
-    const modal = document.querySelector(".modal");
-    const modalContent= document.querySelector(".modal-copy");
-    const modalImage = document.querySelector('.modal-image');
+    const modals = document.querySelectorAll('.modal');
     const modalOverlay = document.querySelector(".overlay");
-    const closeButton = document.querySelector(".close-button");
     const cards = document.querySelectorAll(".card");
 
-    closeButton.addEventListener("click", function() {
-        modal.classList.toggle("closed");
-        modalOverlay.classList.toggle("closed");
+    modals.forEach(modal => {
+        const closeButton = modal.childNodes[1];
+        closeButton.addEventListener("click", function() {
+            modal.classList.toggle("closed");
+            modalOverlay.classList.toggle("closed");
+        });
     });
 
     cards.forEach(card => {
         card.addEventListener("click", function() {
-            const content = getContent(card.innerHTML);
+            const id = getModalId(card.innerHTML.slice(1));
+            const modal = document.querySelector(`#${id}`);
             modal.classList.toggle("closed");
             modalOverlay.classList.toggle("closed");
-            //modalContent.innerHTML = content.copy;
-            // modalImage.setAttribute('src', content.image);
-            console.log(modalImage)
         });
     });
 

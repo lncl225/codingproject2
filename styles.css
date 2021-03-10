@@ -307,7 +307,7 @@ body {
 }
 
 .modal p {
-    padding: 10px 60px;
+    padding: 10px 0;
 }
 
 .modal .close-button {
@@ -327,11 +327,7 @@ body {
 }
 
 .modal-content {
-
-}
-
-.modal-copy {
-
+    padding: 60px;
 }
 
 #scroll-button {
