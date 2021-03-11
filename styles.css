@@ -15,16 +15,15 @@ body {
     background-image: url("./imgs/71design.png");
     background-repeat: repeat-y;
     background-size: cover;
-
-
 }
+
 .pageContainer {
     max-width: 1200px;
     margin: auto;
 }
 
 .pageHeader {
-    background-color: rgb(255, 235, 196);
+    background-color:rgb(243, 195, 63);
     text-align: center;
     font-weight: 700;
     position: static;
@@ -42,9 +41,12 @@ body {
 .pageHeaderevent h3 {
     margin: 0;
     padding: 0;
+    font-style: normal;
+    font-family: 'bellota';
 }
 
 .subHeader {
+    background-color: khaki;
     margin: 0px;
     height: 100px;
     text-align: center;
@@ -52,35 +54,57 @@ body {
     font-family: 'bellota', cursive;
     font-weight: 700;
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.subHeader h2 {
+    margin: 0;
+    font-weight: 900;
+    }
 
 .subHeaderevent {
-        margin-top: 2px;
-        padding: 2px;
-        height: auto;
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        grid-template-columns: 100px 100px 100px;
-        grid-gap: 10px;
-        background-color: #fff;
-        color: #444;
+    padding: 2px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+    background-color:khaki;
+    color: #444;
 }
 
+.subHeaderevent h3 {
+    margin-top: 2px;
+    font-weight: 900;
+    font-size: 23px;
+    text-align: center;
+}
 
 .box {
-        background-color: rgb(109, 199, 132);
-        justify-content: left;
-        flex-direction: row;
-        flex-grow: inherit;
-        height: auto;
-        width: auto;
-        color:rgb(34, 2, 30);
-        border-radius: 5px;
-        margin: 14px;
-        padding: 20px;
-        font-size: 12px;
+    background-color: rgb(109, 199, 132);
+    justify-content: left;
+    flex-direction: row;
+    flex-grow: inherit;
+    height: auto;
+    width: auto;
+    color:rgb(34, 2, 30);
+    border-radius: 5px;
+    margin: 14px;
+    padding: 20px;
+    font-size: 12px;
+    border:rgb(64, 30, 126);
+    border-width: 3px;
+    border-style:double;
 }
+
+.box h2 {
+    font-weight: 700;
+    font-family: 'bellota-litghtitalic';
+}
+
 
 .alphabet_chunk {
     height: 5%;
@@ -96,7 +120,7 @@ body {
 .carousel__container {
     overflow: hidden;
     box-sizing: border-box;
-    background-color:rgb(241, 225, 129)
+    background-color:khaki;
 }
 
 .carousel {
@@ -291,13 +315,16 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     /* Size */
-    height: 950px;
-    width: 550px;
+    height: 90%;
+    width: 90%;
+    max-height: 950px;
+    max-width: 550px;
     background-color: rgb(250, 242, 228);
     border-color: rgb(135, 14, 146);
     border-style: solid;
     border-width: 7px;
     border-radius: 22px;
+    overflow: auto;
 }
 
 .modal.closed {
